@@ -11,7 +11,7 @@ function App() {
     setReverse(!reverse);
   };
   const handleIncrement = () => {
-    setCounter(counter + 1);
+    setCounter((counter) => counter + 1);
   };
 
   return (
