@@ -2,7 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-function App() {
+// function UseState() {
+//   const [counter, setCounter] = useState(0);
+
+//   //componentDidUpdate - runs every time the component updates
+//   useEffect(() => {
+//     console.log('componentDidUpdate');
+//   });
+//   //componentDidMont - run 1x
+//   useEffect(() => {
+//     console.log('componentDidMount');
+//   }, []);
+
+//   //With dependence - run every time the dependency changes
+//   useEffect(() => {
+//     console.log('accountant changed to ', counter);
+//   }, [counter]);
+
+//   return (
+//     <div className="App">
+//       <h1>Contador : {counter}</h1>
+//       <button onClick={() => setCounter(counter + 1)}>+</button>
+//     </div>
+//   );
+// }
+
+function UseState() {
   const [reverse, setReverse] = useState(false);
   const [counter, setCounter] = useState(0);
   const reverseClass = reverse ? 'reverse' : '';
@@ -36,4 +61,4 @@ function App() {
   );
 }
 
-export default App;
+export default UseState;
