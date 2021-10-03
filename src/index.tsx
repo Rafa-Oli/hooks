@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import UseCallback from './useCallback';
-// import UseEffect from './useEffect';
-// import UseState from './useState';
+import UseMemo from './useMemo';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <UseState /> */}
     {/* <UseEffect /> */}
-    <UseCallback />
+    {/* <UseCallback /> */}
+    <UseMemo />
   </React.StrictMode>,
   document.getElementById('root'),
 );

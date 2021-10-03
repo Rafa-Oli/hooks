@@ -5,3 +5,4 @@
 - [x] UseState
 - [x] UseUffect
 - [x] UseCallback
+- [x] UseMemo
