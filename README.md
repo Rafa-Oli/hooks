@@ -7,3 +7,4 @@
 - [x] UseCallback
 - [x] UseMemo
 - [x] UseRef
+- [x] UseContext

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import UseRef from './useRef';
+import UseContext from './useContext';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,7 +10,8 @@ ReactDOM.render(
     {/* <UseEffect /> */}
     {/* <UseCallback /> */}
     {/* <UseMemo /> */}
-    <UseRef />
+    {/* <UseRef /> */}
+    <UseContext />
   </React.StrictMode>,
   document.getElementById('root'),
 );
