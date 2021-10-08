@@ -8,3 +8,4 @@
 - [x] UseMemo
 - [x] UseRef
 - [x] UseContext
+- [x] UseReducer

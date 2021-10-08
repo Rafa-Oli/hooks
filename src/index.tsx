@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import UseContext from './useContext';
+import UseReducer from './useReducer';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +11,8 @@ ReactDOM.render(
     {/* <UseCallback /> */}
     {/* <UseMemo /> */}
     {/* <UseRef /> */}
-    <UseContext />
+    {/* <UseContext /> */}
+    <UseReducer />
   </React.StrictMode>,
   document.getElementById('root'),
 );
