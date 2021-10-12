@@ -23,7 +23,6 @@ export const AppContext = ({ children }: any) => {
   const [state, dispatch] = useReducer(reducer, globalState);
 
   const changeTitle = (payload: string) => {
-    console.log('ola');
     dispatch({ type: actions.CHANGED_TITLE, payload });
   };
 

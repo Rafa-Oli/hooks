@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import UseReducerAndContext from './useReducerAndUseContext';
+import HookCustom from './hook-custom';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +13,8 @@ ReactDOM.render(
     {/* <UseRef /> */}
     {/* <UseContext /> */}
     {/* <UseReducer /> */}
-    <UseReducerAndContext />
+    {/* <UseReducerAndContext /> */}
+    <HookCustom />
   </React.StrictMode>,
   document.getElementById('root'),
 );
