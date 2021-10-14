@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
+import { GlobalContext } from './context';
 import { globalState } from './data';
-
-export const GlobalContext = React.createContext(undefined);
 
 export const AppContext = ({ children }: any) => {
   const [contextState, setContextState] = useState(globalState);
