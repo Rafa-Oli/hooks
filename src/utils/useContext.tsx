@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppContext } from './contexts/AppContext';
-import { Div } from './components/Div/index';
+import { Div } from '../components/Div';
+import { AppContext } from '../contexts/AppContext';
 
 function UseContext() {
   return (
