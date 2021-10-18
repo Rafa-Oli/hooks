@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './templates/App';
+import { Home } from './templates/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <UseState /> */}
     {/* <UseEffect /> */}
     {/* <UseCallback /> */}
@@ -15,6 +15,7 @@ ReactDOM.render(
     {/* <UseReducer /> */}
     {/* <UseReducerAndContext /> */}
     {/* <HookCustom /> */}
+    <Home />
   </React.StrictMode>,
   document.getElementById('root'),
 );
