@@ -29,11 +29,13 @@ const useFetch = (url, options) => {
 
   useEffect(() => {
     let wait = false;
+    const controller = new AbortController();
+    const signal = controller.signal;
     setLoading(true);
     const fetchData = async () => {
       await new Promise((r) => setTimeout(r, 1000));
       try {
-        const response = await fetch(urlRef.current, optionsRef.current);
+        const response = await fetch(urlRef.current, { signal, ...optionsRef.current });
         const jsonResult = await response.json();
         if (!wait) {
           setResult(jsonResult);
@@ -43,19 +45,20 @@ const useFetch = (url, options) => {
         if (!wait) {
           setLoading(false);
         }
-        throw e;
+        console.warn(e);
       }
     };
     fetchData();
     return () => {
       wait = true;
+      controller.abort();
     };
   }, [shouldLoad]);
 
   return [result, loading];
 };
 
-export const Home = () => {
+const Home = () => {
   const [postId, setPostId] = useState('');
   const [result, loading] = useFetch('https://jsonplaceholder.typicode.com/posts/' + postId, {
     method: 'GET',
@@ -80,16 +83,17 @@ export const Home = () => {
       <div>
         {result?.length > 0 ? (
           result.map((p) => (
-            <div key={p.id} onClick={() => handleClick(p.id)}>
-              <p>{p.title}</p>
+            <div key={p?.id} onClick={() => handleClick(p?.id)}>
+              <p>{p?.title}</p>
             </div>
           ))
         ) : (
           <div onClick={() => handleClick('')}>
-            <p>{result.title}</p>
+            <p>{result?.title}</p>
           </div>
         )}
       </div>
     );
   }
 };
+export default Home;
