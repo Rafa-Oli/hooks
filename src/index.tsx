@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './templates/Home';
+import PostsExample from './templates/PostsExample/PostsExample';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Home />
+    <PostsExample />
     {/* <UseState /> */}
     {/* <UseEffect /> */}
     {/* <UseCallback /> */}
