@@ -9,3 +9,4 @@
 - [x] UseRef
 - [x] UseContext
 - [x] UseReducer
+- [x] UseLayoutEffect

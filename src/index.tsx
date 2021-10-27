@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import PostsExample from './templates/PostsExample/PostsExample';
+import { UseLayoutEffect } from './templates/UseLayoutEffect/index';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <PostsExample />
+    {/* <PostsExample /> */}
     {/* <UseState /> */}
     {/* <UseEffect /> */}
     {/* <UseCallback /> */}
@@ -16,6 +16,7 @@ ReactDOM.render(
     {/* <UseReducer /> */}
     {/* <UseReducerAndContext /> */}
     {/* <HookCustom /> */}
+    <UseLayoutEffect />
   </React.StrictMode>,
   document.getElementById('root'),
 );
