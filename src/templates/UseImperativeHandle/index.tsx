@@ -19,30 +19,30 @@ export const UseImperativeHandle = () => {
   return (
     <>
       <button onClick={handleClick}>Count {counted.slice(-1)}</button>
-      <DisplayCounted counted={counted} ref={divRef}></DisplayCounted>
+      {/* <DisplayCounted counted={counted} ref={divRef}></DisplayCounted> */}
     </>
   );
 };
 
-export const DisplayCounted = forwardRef(function DisplayCounted({ counted }, ref) {
-  const [rand, setRand] = useState('0.24');
-  const divRef = useRef();
-  const handleClick = () => {
-    setRand(Math.random().toFixed(2));
-  };
-  useImperativeHandle(ref, () => ({
-    handleClick,
-    divRef: divRef.current,
-  }));
-  return (
-    <div ref={divRef} style={{ height: '100px', width: '100px', overflowY: 'scroll' }}>
-      {counted.map((c) => {
-        return (
-          <p key={`c-${c}`} onClick={handleClick}>
-            {c} +++ {rand}
-          </p>
-        );
-      })}
-    </div>
-  );
-});
+// export const DisplayCounted = forwardRef(function DisplayCounted({ counted }, ref) {
+//   const [rand, setRand] = useState('0.24');
+//   const divRef = useRef();
+//   const handleClick = () => {
+//     setRand(Math.random().toFixed(2));
+//   };
+//   useImperativeHandle(ref, () => ({
+//     handleClick,
+//     divRef: divRef.current,
+//   }));
+//   return (
+//     <div ref={divRef} style={{ height: '100px', width: '100px', overflowY: 'scroll' }}>
+//       {counted.map((c) => {
+//         return (
+//           <p key={`c-${c}`} onClick={handleClick}>
+//             {c} +++ {rand}
+//           </p>
+//         );
+//       })}
+//     </div>
+//   );
+// });
